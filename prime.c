@@ -95,7 +95,8 @@ long next(int* active, long* sqarr, long limit, int high) {
 				}
 			}
 			parity = 2;
-			val = sqarr[0] * sqarr[new_high];
+			val = sqarr[high] * sqarr[new_high];
+			if (val > limit) val = 0;
 		}
 	}
 	// if we flipped the high bit return zero parity
